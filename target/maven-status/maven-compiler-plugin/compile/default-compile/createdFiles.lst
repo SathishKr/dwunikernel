@@ -1,0 +1,4 @@
+dwunikernel\resources\HelloWorldResource.class
+dwunikernel\DwUnikernelApplication.class
+dwunikernel\DwUnikernelConfiguration.class
+dwunikernel\health\TemplateHealthCheck.class
