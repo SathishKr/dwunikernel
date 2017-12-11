@@ -4,7 +4,7 @@
   <groupId>dwunikernel</groupId>
   <artifactId>dwunikernel</artifactId>
   <name>DwUnikernel</name>
-  <version>1.4</version>
+  <version>0-SNAPSHOT</version>
   <prerequisites>
     <maven>3.0.0</maven>
   </prerequisites>
@@ -84,52 +84,6 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>com.boxfuse.client</groupId>
-        <artifactId>boxfuse-maven-plugin</artifactId>
-        <version>1.30.3.1419</version>
-        <executions>
-          <execution>
-            <id>fuse-image</id>
-            <phase>package</phase>
-            <goals>
-              <goal>fuse</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>run-on-aws</id>
-            <phase>deploy</phase>
-            <goals>
-              <goal>run</goal>
-            </goals>
-            <configuration>
-              <env>prod</env>
-            </configuration>
-          </execution>
-          <execution>
-            <id>remove-vault-image</id>
-            <phase>deploy</phase>
-            <goals>
-              <goal>rm</goal>
-            </goals>
-            <configuration>
-              <image>dwunikernel:1.1</image>
-              <vault>true</vault>
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <user>eae868f4e37f4132b743b59be0a98664</user>
-          <secret>9uWVWrXTyqJEcpfQvTKhR67Z2eFA2WQG1z6dDgtq3PAV0NmxbEV2WWrkHvMog18T</secret>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.8.2</version>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
       </plugin>
     </plugins>
   </build>

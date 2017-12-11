@@ -25,7 +25,7 @@ public class DwUnikernelApplication extends Application<DwUnikernelConfiguration
 	@Override
 	public void run(final DwUnikernelConfiguration configuration, final Environment environment) {
 		// TODO: implement application
-		String template = "New Upgraded Version, %s!";
+		String template = "Brand New Upgraded Version, %s!";
 		environment.jersey().register(new HelloWorldResource(template));
 		environment.healthChecks().register("template", new TemplateHealthCheck(template));
 	}
